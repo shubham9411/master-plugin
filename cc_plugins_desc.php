@@ -14,4 +14,11 @@ $all_plugins = array(
 			'status' => 'deactive',
 			'slug' => 'edit.php?post_type=faqs',
 			),
+		array(
+			'name' => 'Links',
+			'description' => 'Manage Links to another Website',
+			'callback' => 'cc_links',
+			'status' => 'deactive',
+			'slug' => 'edit.php?post_type=links',
+			),
 	);

@@ -31,15 +31,6 @@ if( ! function_exists('cc_register_testimonial')){
 		register_post_type( 'testimonial', $args );
 	}
 }
-if(!function_exists('cc_testimonial_title')){
-	function cc_testimonial_title( $title ){
-		$screen = get_current_screen();
-		if  ( 'testimonial' == $screen->post_type ) {
-			$title = 'Parents Name';
-		}
-		return $title;
-	}
-}
 if(!function_exists('cc_testimonial_template')){	
 	function cc_testimonial_template() {
 		global $wp;

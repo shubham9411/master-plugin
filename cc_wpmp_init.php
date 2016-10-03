@@ -81,3 +81,18 @@ if(!function_exists('cc_update_option')){
 		}
 	}
 }
+if(!function_exists('cc_wpmp_title')){
+	function cc_wpmp_title( $title ){
+		$screen = get_current_screen();
+		if  ( 'testimonial' == $screen->post_type ) {
+			$title = 'Parents Name';
+		}
+		if  ( 'faqs' == $screen->post_type ) {
+			$title = 'Question';
+		}
+		if  ( 'links' == $screen->post_type ) {
+			$title = 'Link Title Here';
+		}
+		return $title;
+	}
+}

@@ -19,8 +19,8 @@ if(!function_exists('cc_wpmp_init')){
 if(!function_exists('cc_plugin_setup')){
 	function cc_plugin_setup(){
 		$option = 'cc_wpmp_plugins';
-		$value = '';
-		add_option($option,$value,'','');
+		include('cc_plugins_desc.php');
+		add_option($option,$all_plugins,'','');
 	}
 }
 add_action('admin_menu','cc_admin_menu_wpmp');

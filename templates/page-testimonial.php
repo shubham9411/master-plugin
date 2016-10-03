@@ -9,7 +9,6 @@ get_header();
 <div class="row">
 	<div class="col-xs-offset-1 col-md-offset-2 col-xs-10 col-md-8">
 		<?php
-		global $max_post;
 		$args = array('post_type' => 'testimonial', 'posts_per_page' => 10);
 		$loop = new WP_Query($args);
 		while($loop->have_posts()){
@@ -25,6 +24,7 @@ get_header();
 				<p class="excerpt"><?php echo get_the_content();?></p>
 			</div>
 		</div>
+		<div class="gap-div"></div>
 		<?php
 		}
 		?>

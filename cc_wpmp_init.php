@@ -10,6 +10,8 @@ if(!function_exists('cc_wpmp_enqueue_no_priv')){
 	function cc_wpmp_enqueue_no_priv(){
 		wp_enqueue_style('bootstrap_css',plugins_url('css/bootstrap.min.css',__FILE__));
 		wp_enqueue_style('wpmp_style',plugins_url('css/style.css',__FILE__));
+		wp_enqueue_script('jquery_js',plugins_url('js/jquery.min.js',__FILE__));
+		wp_enqueue_script('cc_wpmp_main',plugins_url('js/main.js',__FILE__));
 	}
 }
 if(!function_exists('cc_admin_menu_wpmp')){

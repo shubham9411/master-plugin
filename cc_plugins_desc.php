@@ -4,12 +4,14 @@ $all_plugins = array(
 			'name' => 'Testimonial',
 			'description' => 'Manage your Clients testimonials easily',
 			'callback' => 'cc_testimonial',
-			'status' => 'deactive'
+			'status' => 'deactive',
+			'slug' => 'edit.php?post_type=testimonial',
 			),
 		array(
 			'name' => 'FAQs',
 			'description' => 'FAQs',
 			'callback' => 'cc_faqs',
-			'status' => 'deactive'
+			'status' => 'deactive',
+			'slug' => 'edit.php?post_type=faqs',
 			),
 	);

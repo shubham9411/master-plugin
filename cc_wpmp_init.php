@@ -1,4 +1,11 @@
 <?php 
+if(!function_exists('cc_enqueue_wpmp')){
+	function cc_enqueue_wpmp() {
+		wp_enqueue_script('jquery_js',plugins_url('js/jquery.min.js',__FILE__));
+		wp_enqueue_script('cc_wpmp_main',plugins_url('js/main.js',__FILE__));
+		wp_localize_script('cc_wpmp_main','ajaxurl_wpmp',admin_url('admin-ajax.php') );
+	}
+}
 if(!function_exists('cc_admin_menu_wpmp')){
 	function cc_admin_menu_wpmp(){
 		add_menu_page('WPMP','Master Plugin','manage_options','wpmp','cc_wpmp_init');	

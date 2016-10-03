@@ -9,7 +9,7 @@ $all_plugins = array(
 			),
 		array(
 			'name' => 'FAQs',
-			'description' => 'FAQs',
+			'description' => 'Manage Frequently asked questions',
 			'callback' => 'cc_faqs',
 			'status' => 'deactive',
 			'slug' => 'edit.php?post_type=faqs',
@@ -20,5 +20,19 @@ $all_plugins = array(
 			'callback' => 'cc_links',
 			'status' => 'deactive',
 			'slug' => 'edit.php?post_type=links',
+			),
+		array(
+			'name' => 'Team Management',
+			'description' => 'Manage Teams',
+			'callback' => 'cc_teams',
+			'status' => 'deactive',
+			'slug' => 'edit.php?post_type=teams',
+			),
+		array(
+			'name' => 'Gallery',
+			'description' => 'Gallery',
+			'callback' => 'cc_gallery',
+			'status' => 'deactive',
+			'slug' => 'edit.php?post_type=gallery',
 			),
 	);

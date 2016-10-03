@@ -48,6 +48,14 @@ if(!function_exists('cc_plugin_setup')){
 			'post_type'     => 'page',
 		);
 		wp_insert_post( $my_post, '' );
+		$my_post = array(
+			'post_title'    => 'Team Page',
+			'post_content'  => '',
+			'post_status'   => 'publish',
+			'post_author'   => get_current_user_id(),
+			'post_type'     => 'page',
+		);
+		wp_insert_post( $my_post, '' );
 	}
 }
 if(!function_exists('cc_activate_features')){
@@ -93,6 +101,52 @@ if(!function_exists('cc_wpmp_title')){
 		if  ( 'links' == $screen->post_type ) {
 			$title = 'Link Title Here';
 		}
+		if  ( 'teams' == $screen->post_type ) {
+			$title = 'Name';
+		}
 		return $title;
+	}
+}
+if(!function_exists('cc_wpmp_template')){	
+	function cc_wpmp_template() {
+		global $wp;
+		$plugins = get_option('cc_wpmp_plugins');
+		$plugindir = dirname( __FILE__ );
+		if ($wp->query_vars != null && $wp->query_vars["pagename"] == 'testimonial') {
+			if($plugins[0]['status']=='active'){
+				$templatefilename = 'page-testimonial.php';
+				if (file_exists(TEMPLATEPATH . '/' . $templatefilename)) {
+					$return_template = TEMPLATEPATH . '/' . $templatefilename;
+				}
+				else {
+					$return_template = $plugindir . '/templates/' . $templatefilename;
+				}
+				cc_wpmp_redirect($return_template);
+			}
+		}
+		if ($wp->query_vars != null && $wp->query_vars["pagename"] == 'team-page') {
+			if($plugins[3]['status']=='active'){
+				$templatefilename = 'page-teams.php';
+				if (file_exists(TEMPLATEPATH . '/' . $templatefilename)) {
+					$return_template = TEMPLATEPATH . '/' . $templatefilename;
+				}
+				else {
+					$return_template = $plugindir . '/templates/' . $templatefilename;
+				}
+				cc_wpmp_redirect($return_template);
+			}
+		}
+	}
+}
+if(!function_exists('cc_wpmp_redirect')){
+	function cc_wpmp_redirect($url) {
+		global $post, $wp_query;
+		if (have_posts()) {
+			include($url);
+			die();
+		}
+		else {
+			$wp_query->is_404 = true;
+		}
 	}
 }

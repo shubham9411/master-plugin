@@ -18,7 +18,7 @@ get_header();
 		<hr class="hr-purple">
 		<div class="row">
 			<div class="col-xs-3">
-				<?php echo get_the_post_thumbnail( $post_id, 'medium' , 'class=img-responsive' );?>
+				<?php echo get_the_post_thumbnail( 0, 'medium' , 'class=img-responsive' );?>
 			</div>
 			<div class="col-xs-9">
 				<p class="excerpt"><?php echo get_the_content();?></p>

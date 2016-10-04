@@ -32,7 +32,7 @@ if( ! function_exists('cc_wpmp_register_teams')){
 }
 if(!function_exists('cc_create_team_metabox')){
 	function cc_create_team_metabox(){
-		add_meta_box( 'cc_team_details','Details','cc_team_metabox','cc_team');
+		add_meta_box( 'cc_team_details','Details','cc_team_metabox','teams');
 	}
 }
 if(!function_exists('cc_team_metabox')){

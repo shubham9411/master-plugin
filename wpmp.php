@@ -11,7 +11,7 @@ include('cc_wpmp_testimonial.php');
 include('cc_wpmp_faqs.php');
 include('cc_wpmp_links.php');
 include('cc_wpmp_teams.php');
-// include('cc_wpmp_gallery.php');
+include('cc_wpmp_gallery.php');
 add_action('admin_enqueue_scripts','cc_wpmp_enqueue');
 add_action('wp_enqueue_scripts','cc_wpmp_enqueue_no_priv');
 add_action('init','cc_activate_features');
@@ -26,9 +26,6 @@ add_action('cc_teams','cc_wpmp_register_teams');
 add_action('cc_links','cc_wpmp_register_links');
 add_action('save_post','cc_link_save');
 add_action('save_post','cc_team_save');
-
 add_action('add_meta_boxes','cc_add_link_metabox');
 add_action('add_meta_boxes','cc_create_team_metabox');
-
-
-// add_action('cc_gallery','');
+add_action('cc_gallery','cc_wpmp_register_gallery');

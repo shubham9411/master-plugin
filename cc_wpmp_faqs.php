@@ -27,6 +27,6 @@ if( ! function_exists('cc_register_faq')){
 				'title', 'editor',
 				)
 		);
-		register_post_type( 'faqs', $args );
+		register_post_type( 'faq', $args );
 	}
 }

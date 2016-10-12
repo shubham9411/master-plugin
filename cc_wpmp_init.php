@@ -49,7 +49,7 @@ if(!function_exists('cc_plugin_setup')){
 		);
 		wp_insert_post( $my_post, '' );
 		$my_post = array(
-			'post_title'    => 'Team Page',
+			'post_title'    => 'About',
 			'post_content'  => '',
 			'post_status'   => 'publish',
 			'post_author'   => get_current_user_id(),
@@ -101,7 +101,7 @@ if(!function_exists('cc_wpmp_title')){
 		if  ( 'links' == $screen->post_type ) {
 			$title = 'Link Title Here';
 		}
-		if  ( 'teams' == $screen->post_type ) {
+		if  ( 'members' == $screen->post_type ) {
 			$title = 'Name';
 		}
 		return $title;

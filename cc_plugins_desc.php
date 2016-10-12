@@ -12,7 +12,7 @@ $all_plugins = array(
 			'description' => 'Manage Frequently asked questions',
 			'callback' => 'cc_faqs',
 			'status' => 'deactive',
-			'slug' => 'edit.php?post_type=faqs',
+			'slug' => 'edit.php?post_type=faq',
 			),
 		array(
 			'name' => 'Links',
@@ -26,7 +26,7 @@ $all_plugins = array(
 			'description' => 'Manage Teams',
 			'callback' => 'cc_teams',
 			'status' => 'deactive',
-			'slug' => 'edit.php?post_type=teams',
+			'slug' => 'edit.php?post_type=members',
 			),
 		array(
 			'name' => 'Gallery',

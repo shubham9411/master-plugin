@@ -1,38 +1,37 @@
 <?php
-if( ! function_exists('cc_wpmp_register_teams')){
-	function cc_wpmp_register_teams() {
+if( ! function_exists('cc_wpmp_register_members')){
+	function cc_wpmp_register_members() {
 		$labels = array(
-			'name' => 'Teams',
-			'singular_name' => 'Team',
-			'add_new' => 'Add New Team',
-			'add_new_item' => 'Add New Team',
-			'edit_item' => 'Edit Team',
-			'new_item' => 'New Team',
-			'view_item' => 'View Team',
-			'search_items' => 'Search Teams',
-			'not_found' => 'No Teams found',
-			'not_found_in_trash' => 'No Teams found in Trash',
-			'parent_item_colon' => 'Parent Team:',
-			'menu_name' => 'Teams',
+			'name' => 'Members',
+			'singular_name' => 'Member',
+			'add_new' => 'Add New Member',
+			'add_new_item' => 'Add New Member',
+			'edit_item' => 'Edit Member',
+			'new_item' => 'New Member',
+			'view_item' => 'View Member',
+			'search_items' => 'Search Members',
+			'not_found' => 'No Members found',
+			'not_found_in_trash' => 'No Members found in Trash',
+			'menu_name' => 'Members',
 		);
 		$args = array(
 			'labels' => $labels,
 			'hierarchical' => false,
-			'description' => 'Add/Remove Teams',
-			'public' => true,
+			'description' => 'Add/Remove Members',
 			'show_in_menu' => false,
+			'public' => true,
 			'capability_type' => 'post',
 			'has_archive' => true,
 			'supports' => array(
 				'title', 'editor','thumbnail'
 				)
 		);
-		register_post_type( 'teams', $args );
+		register_post_type( 'members', $args );
 	}
 }
 if(!function_exists('cc_create_team_metabox')){
 	function cc_create_team_metabox(){
-		add_meta_box( 'cc_team_details','Details','cc_team_metabox','teams');
+		add_meta_box( 'cc_team_details','Details','cc_team_metabox','members');
 	}
 }
 if(!function_exists('cc_team_metabox')){

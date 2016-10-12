@@ -22,7 +22,7 @@ add_filter('enter_title_here','cc_wpmp_title');
 add_action('cc_testimonial','cc_register_testimonial');
 add_action('template_redirect','cc_wpmp_template');
 add_action('cc_faqs','cc_register_faq');
-add_action('cc_teams','cc_wpmp_register_teams');
+add_action('cc_teams','cc_wpmp_register_members');
 add_action('cc_links','cc_wpmp_register_links');
 add_action('save_post','cc_link_save');
 add_action('save_post','cc_team_save');

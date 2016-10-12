@@ -112,7 +112,7 @@ if(!function_exists('cc_wpmp_template')){
 		global $wp;
 		$plugins = get_option('cc_wpmp_plugins');
 		$plugindir = dirname( __FILE__ );
-		if ($wp->query_vars != null && $wp->query_vars["pagename"] == 'testimonial') {
+		if (isset($wp->query_vars["pagename"]) && $wp->query_vars["pagename"] == 'testimonial') {
 			if($plugins[0]['status']=='active'){
 				$templatefilename = 'page-testimonial.php';
 				if (file_exists(TEMPLATEPATH . '/' . $templatefilename)) {
@@ -124,7 +124,7 @@ if(!function_exists('cc_wpmp_template')){
 				cc_wpmp_redirect($return_template);
 			}
 		}
-		if ($wp->query_vars != null && $wp->query_vars["pagename"] == 'team-page') {
+		if (isset($wp->query_vars["pagename"]) && $wp->query_vars["pagename"] == 'about') {
 			if($plugins[3]['status']=='active'){
 				$templatefilename = 'page-teams.php';
 				if (file_exists(TEMPLATEPATH . '/' . $templatefilename)) {

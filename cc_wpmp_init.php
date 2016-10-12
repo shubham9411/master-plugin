@@ -39,7 +39,7 @@ if(!function_exists('cc_plugin_setup')){
 	function cc_plugin_setup(){
 		$option = 'cc_wpmp_plugins';
 		include('cc_plugins_desc.php');
-		add_option($option,$all_plugins);
+		update_option($option,$all_plugins);
 		$my_post = array(
 			'post_title'    => 'Testimonial',
 			'post_content'  => '',

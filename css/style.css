@@ -1,11 +1,11 @@
 .gap-div{
 	min-height: 40px;
 }
-.morecontent {
-    display: none;
+.morecontent span {
+	display: none;
 }
 .morelink {
-    display: block;
+	display: block;
 }
 .inline-block-text{
 	display: inline-block;

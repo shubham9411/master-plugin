@@ -19,7 +19,7 @@ if(!function_exists('cc_admin_menu_wpmp')){
 	function cc_admin_menu_wpmp(){
 		$parent_slug = 'wpmp';
 		add_menu_page('WPMP','Master Plugin','activate_plugins','wpmp','cc_wpmp_init');	
-		add_submenu_page( $parent_slug, 'Manage Plugin', 'Manage Plugin','manage_options', 'wpmp');
+		add_submenu_page( $parent_slug, 'Settings', 'Settings','manage_options', 'wpmp');
 		$plugins = get_option('cc_wpmp_plugins');
 		foreach($plugins as $plugin){
 			if($plugin['status']=='active'){

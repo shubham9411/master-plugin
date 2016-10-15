@@ -18,7 +18,11 @@ $plugins = get_option('cc_wpmp_plugins');
 			foreach($all_plugins as $plugin){
 			?>
 			<tr>
-				<td class="plugin"><?php echo $plugin['name'];?></td>
+				<td class="plugin">
+					<a href="<?php echo get_admin_url().$plugin['slug'];?>">
+						<?php echo $plugin['name'];?>
+					</a>
+				</td>
 				<td class="status">
 					<form action="" method="POST">
 						<input type="hidden" id="<?php echo $plugin['name'];?>" name="plugin_name" value="<?php echo $plugin['name'];?>">
@@ -31,14 +35,14 @@ $plugins = get_option('cc_wpmp_plugins');
 								echo 'Activate';
 							}
 							?>
-					</form>
-				</td>
-				<td class="description"><?php echo $plugin['description'];?></td>
-			</tr>
-		</tbody>
-		<?php
-		$counter++;
-		}
-		?>
-	</table>
-</div>
+						</form>
+					</td>
+					<td class="description"><?php echo $plugin['description'];?></td>
+				</tr>
+			</tbody>
+			<?php
+			$counter++;
+			}
+			?>
+		</table>
+	</div>

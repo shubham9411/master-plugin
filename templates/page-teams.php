@@ -75,9 +75,9 @@ get_header();
 		?>
 		<div class="member">
 			<div class="mediumpurple-color col-xs-12">
-				<div class="team-heading font-white	">
-					<h2 class="inline-block-text"><p class="member-title">You</p></h2>
-					<h2 class="pull-right">
+				<div class="team-heading font-white your-title">
+					<h2 class="inline-block-text hidden-xs"><p class="member-title">You</p></h2>
+					<h2 class="pull-right center-xs">
 					<a href="mailto:Opportunities@SpecialNeedsPT.com">
 						<p class="member-title font-white">
 							Email Resume at: Opportunities@SpecialNeedsPT.com

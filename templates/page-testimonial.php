@@ -18,7 +18,14 @@ get_header();
 		<hr class="hr-purple">
 		<div class="row">
 			<div class="col-xs-3">
-				<?php echo get_the_post_thumbnail( 0, 'medium' , 'class=img-responsive' );?>
+				<?php 
+				if(has_post_thumbnail($loop->post_id)){
+					echo get_the_post_thumbnail( 0, 'medium' , 'class=img-responsive' );
+				}
+				else{
+					echo '<img src="'.plugins_url('img/quotation.png',__DIR__).'" class="img-responsive">';
+				}
+				?>
 			</div>
 			<div class="col-xs-9">
 				<p class="excerpt"><?php echo get_the_content();?></p>

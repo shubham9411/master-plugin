@@ -1,6 +1,9 @@
 .gap-div{
 	min-height: 40px;
 }
+.gap-xs{
+	min-height: 10px;
+}
 .morecontent span {
 	display: none;
 }
@@ -15,4 +18,10 @@
 		max-width: 8em;
 		margin-left: 25%;
 	}
+}
+.member-title{
+	font-size: .8em;
+}
+.member-designation{
+	font-size: .5em;
 }

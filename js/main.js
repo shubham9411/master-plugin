@@ -1,4 +1,4 @@
-var showChar = 100;
+var showChar = 150;
 var ellipsestext = "...";
 var moretext = "<b>Read More</b>&nbsp;<img class='read-more' src='"+read_more_image+"'>";
 var lesstext = "<b>Read Less</b>&nbsp;<img class='read-less' src='"+read_more_image+"'>";

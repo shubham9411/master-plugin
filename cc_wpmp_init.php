@@ -41,22 +41,30 @@ if(!function_exists('cc_plugin_setup')){
 		$option = 'cc_wpmp_plugins';
 		include('cc_plugins_desc.php');
 		update_option($option,$all_plugins);
-		$my_post = array(
-			'post_title'    => 'Testimonial',
-			'post_content'  => '',
-			'post_status'   => 'publish',
-			'post_author'   => get_current_user_id(),
-			'post_type'     => 'page',
-		);
-		wp_insert_post( $my_post, '' );
-		$my_post = array(
-			'post_title'    => 'About',
-			'post_content'  => '',
-			'post_status'   => 'publish',
-			'post_author'   => get_current_user_id(),
-			'post_type'     => 'page',
-		);
-		wp_insert_post( $my_post, '' );
+		$args = array('post_type' => 'page', 'name' => 'Testimonial');
+		$check = new WP_Query($args);
+		if($check->post_count==0){
+			$my_post = array(
+				'post_title'    => 'Testimonial',
+				'post_content'  => '',
+				'post_status'   => 'publish',
+				'post_author'   => get_current_user_id(),
+				'post_type'     => 'page',
+			);
+			wp_insert_post( $my_post, '' );
+		}
+		$args = array('post_type' => 'page', 'name' => 'About');
+		$check = new WP_Query($args);
+		if($check->post_count==0){
+			$my_post = array(
+				'post_title'    => 'About',
+				'post_content'  => '',
+				'post_status'   => 'publish',
+				'post_author'   => get_current_user_id(),
+				'post_type'     => 'page',
+			);
+			wp_insert_post( $my_post, '' );
+		}
 	}
 }
 if(!function_exists('cc_activate_features')){

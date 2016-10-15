@@ -1,7 +1,7 @@
 var showChar = 150;
 var ellipsestext = "...";
-var moretext = "<b>Read More</b>&nbsp;<img class='read-more' src='"+read_more_image+"'>";
-var lesstext = "<b>Read Less</b>&nbsp;<img class='read-less' src='"+read_more_image+"'>";
+var moretext = "<br><b>Read More</b>&nbsp;<img class='read-more' src='"+read_more_image+"'>";
+var lesstext = "<br><b>Read Less</b>&nbsp;<img class='read-less' src='"+read_more_image+"'>";
 function toggle_plugin(plugin){
 	var data = {
 		'plugin_name': plugin,

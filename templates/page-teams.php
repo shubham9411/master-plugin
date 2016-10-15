@@ -37,14 +37,14 @@ get_header();
 			<div class="gap-xs"></div>
 			<div class="mediumpurple-color">
 				<div class="team-heading font-white row">
-					<div class="col-xs-7">
+					<div class="col-xs-12 col-sm-7">
 						<h2>
 						<p class="inline-block-text member-title"><?php the_title();?></p>
 						<p class="inline-block-text member-designation"><i><?php echo $designation; ?></i></p>
 						</h2>
 					</div>
-					<div class="col-xs-5">
-						<h2 class="pull-right">
+					<div class="col-sm-5">
+						<h2 class="pull-right  hidden-xs">
 						<a href="mailto:Opportunities@SpecialNeedsPT.com">
 							<p class="member-title font-white">
 								<?php echo $email;?>
@@ -57,10 +57,10 @@ get_header();
 			<div class="full-border-purple">
 				<div class="gap-top">
 					<div class="row">
-						<div class="col-xs-4">
+						<div class="col-xs-6 col-sm-4 full-width-xs">
 							<?php echo get_the_post_thumbnail(0,'medium','class=img-responsive');?>
 						</div>
-						<div class="col-xs-8">
+						<div class="col-xs-6 col-sm-8 full-width-xs">
 							<p class="excerpt">
 								<?php echo get_the_content();?>
 							</p>
@@ -89,12 +89,12 @@ get_header();
 			<div class="full-border-purple col-xs-12">
 				<div class="gap-top">
 					<div class="row">
-						<div class="col-xs-4 graphite-bg your-image">
+						<div class="col-xs-6 col-sm-4 graphite-bg your-image full-width-xs">
 							<h1 class="text-center">YOU</h1>
 						</div>
-						<div class="col-xs-8">
+						<div class="col-xs-6 col-sm-8 full-width-xs">
 							<p class="excerpt">
-								Special Needs Pediatric Therapy Services will consider licensed physical and occupational therapists with a minimum of one year pediatric experience. NDT & SI training is highly favored.
+								Special Needs Pediatric Therapy Services will consider licensed physical and occupational therapists with a minimum of one year pediatric experience. NDT &amp; SI training is highly favored.
 							</p>
 						</div>
 					</div>

@@ -12,6 +12,7 @@ if(!function_exists('cc_wpmp_enqueue_no_priv')){
 		wp_enqueue_style('wpmp_style',plugins_url('css/style.css',__FILE__));
 		wp_enqueue_script('jquery_js',plugins_url('js/jquery.min.js',__FILE__));
 		wp_enqueue_script('cc_wpmp_main',plugins_url('js/main.js',__FILE__));
+        wp_localize_script('cc_wpmp_main','read_more_image',plugins_url('img/link-icon-green.png',__FILE__));
 	}
 }
 if(!function_exists('cc_admin_menu_wpmp')){

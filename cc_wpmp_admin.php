@@ -31,14 +31,14 @@ $plugins = get_option('cc_wpmp_plugins');
 								echo 'Activate';
 							}
 							?>
-						</form>
-					</td>
-					<td class="description"><?php echo $plugin['description'];?></td>
-				</tr>
-			</tbody>
-			<?php
-			$counter++;
-			}
-			?>
-		</table>
-	</div>
+					</form>
+				</td>
+				<td class="description"><?php echo $plugin['description'];?></td>
+			</tr>
+		</tbody>
+		<?php
+		$counter++;
+		}
+		?>
+	</table>
+</div>

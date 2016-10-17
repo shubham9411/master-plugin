@@ -74,7 +74,7 @@ get_header();
 		}
 		?>
 		<div class="member">
-			<div class="mediumpurple-color col-xs-12">
+			<div class="mediumpurple-color col-xs-12 padding-zero">
 				<div class="team-heading font-white your-title">
 					<h2 class="inline-block-text hidden-xs"><p class="member-title">You</p></h2>
 					<h2 class="pull-right center-xs">

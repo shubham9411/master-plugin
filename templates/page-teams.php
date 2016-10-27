@@ -16,7 +16,7 @@ get_header();
 </div>
 <div class="gap-div"></div>
 <div class="row">
-	<div class="col-xs-offset-1 col-xs-10">
+	<div class="col-xs-offset-1 col-md-offset-2 col-xs-10 col-md-8">
 		<?php
 		$args = array('post_type' => 'members', 'posts_per_page' => 10);
 		$loop = new WP_Query($args);
@@ -44,11 +44,11 @@ get_header();
 						</h2>
 					</div>
 					<div class="col-sm-5">
-						<h2 class="pull-right  hidden-xs">
-						<a href="mailto:Opportunities@SpecialNeedsPT.com">
-							<p class="member-title font-white">
-								<?php echo $email;?>
-							</p>
+						<h2 class="pull-right hidden-xs">
+						<a href="mailto:<?php echo $email;?>">
+							<h4 class="font-white">
+							<?php echo $email;?>
+							</h4>
 						</a>
 						</h2>
 					</div>
@@ -58,7 +58,7 @@ get_header();
 				<div class="gap-top">
 					<div class="row">
 						<div class="col-xs-6 col-sm-4 full-width-xs">
-							<?php echo get_the_post_thumbnail(0,'medium','class=img-responsive');?>
+							<?php echo get_the_post_thumbnail(0,'large','class=img-responsive');?>
 						</div>
 						<div class="col-xs-6 col-sm-8 full-width-xs">
 							<p class="excerpt">

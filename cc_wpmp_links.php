@@ -3,16 +3,16 @@ if( ! function_exists('cc_wpmp_register_links')){
 	function cc_wpmp_register_links() {
 		$labels = array(
 			'name' => 'Links',
-			'singular_name' => 'Links',
-			'add_new' => 'Add New Links',
-			'add_new_item' => 'Add New Links',
-			'edit_item' => 'Edit Links',
-			'new_item' => 'New Links',
-			'view_item' => 'View Links',
-			'search_items' => 'Search Links',
+			'singular_name' => 'Link',
+			'add_new' => 'Add New Link',
+			'add_new_item' => 'Add New Link',
+			'edit_item' => 'Edit Link',
+			'new_item' => 'New Link',
+			'view_item' => 'View Link',
+			'search_items' => 'Search Link',
 			'not_found' => 'No Links found',
 			'not_found_in_trash' => 'No Links found in Trash',
-			'parent_item_colon' => 'Parent Links:',
+			'parent_item_colon' => 'Parent Link:',
 			'menu_name' => 'Links',
 		);
 		$args = array(

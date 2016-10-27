@@ -7,7 +7,6 @@ function toggle_plugin(plugin){
 		'plugin_name': plugin,
 		'action': 'plugin_activate',
 	};
-	console.log(data);
 	$.ajax({
 		url: ajaxurl_wpmp,
 		type: 'POST',
@@ -18,6 +17,10 @@ function toggle_plugin(plugin){
 	});
 }
 $(document).ready(function() {
+	var $window = $(window);
+	if($window.width() > 1440){
+		showChar = 300;
+	}
 	readMore();
 	$(".morelink").click(function(){
 	if($(this).hasClass("less")) {
@@ -37,9 +40,9 @@ function readMore() {
     $('.excerpt').each(function() {
       var content = $(this).html();
       if(content.length > showChar) {
-        var c = content.substr(0, showChar);
-        var h = content.substr(showChar, content.length - showChar);
-        var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+        var short_content = content.substr(0, showChar);
+        var full_content = content.substr(showChar, content.length - showChar);
+        var html = short_content + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + full_content + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
         $(this).html(html);
       }
   });

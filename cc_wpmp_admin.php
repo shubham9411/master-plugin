@@ -4,7 +4,7 @@ $plugins = get_option('cc_wpmp_plugins');
 ?>
 <div class="wrap">
 	<h1>Plugins</h1>
-	<table class="wp-list-table widefat fixed striped plugins">
+	<table class="wp-list-table widefat fixed striped">
 		<thead>
 			<tr>
 				<th id='plugin'>Plugin</th>
@@ -38,11 +38,11 @@ $plugins = get_option('cc_wpmp_plugins');
 						</form>
 					</td>
 					<td class="description"><?php echo $plugin['description'];?></td>
-				</tr>
-			</tbody>
+			</tr>
 			<?php
 			$counter++;
 			}
 			?>
-		</table>
-	</div>
+		</tbody>
+	</table>
+</div>

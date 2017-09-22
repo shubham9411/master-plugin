@@ -1,0 +1,60 @@
+.gap-div{
+	min-height: 40px;
+}
+.gap-xs{
+	min-height: 10px;
+}
+.morecontent span {
+	display: none;
+}
+.morelink {
+	display: block;
+}
+.inline-block-text{
+	display: inline-block;
+}
+.member-title{
+	font-size: .8em;
+}
+.member-designation{
+	font-size: .5em;
+}
+.your-image{
+	height: 18em;
+}
+.your-image h1{
+	margin-top: 3em;
+}
+@media only screen and (max-width: 479px) {
+	.thumbnail-testimonial{
+		max-width: 8em;
+		margin-left: 25%;
+	}
+	.full-width-xs{
+		width: 100%;
+	}
+	.center-xs{
+		float: left !important;
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 767px){
+	.center-xs{
+		float: left !important;
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.your-image{
+		height: 11em;
+	}
+	.your-image h1{
+		margin-top: 1.5em;
+	}
+	.your-title h2{
+		font-size: 1.5em;
+	}
+	.team-heading.your-title{
+		padding-left: 0;
+	}
+}
